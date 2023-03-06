@@ -8,58 +8,53 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.contacts,
-.contact,
-.adress {
+.contacts {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
 
-.contact,
-.adress span {
-  margin-bottom: 10px;
+.contacts span {
+  margin-bottom: 20px;
   font-size: 30px;
   font-weight: 700;
 }
 
-.contact a {
-  color: black;
-  font-size: 40px;
+.contacts a {
   margin-bottom: 15px;
   font-weight: 600;
 }
 
-.contact_link {
+.contacts_tel {
+  font-size: 40px;
+}
+
+.contacts_links {
   display: flex;
   gap: 25px;
   align-items: center;
   text-align: center;
+  font-size: 15px;
 }
 
-.contact_link a {
-  font-size: 10px;
-}
-
-.contact_link img {
+.contacts_links img {
   width: 35px;
   height: 35px;
 }
 
-.adress a {
-  color: black;
+.contacts_adress {
   text-decoration: underline;
   font-size: 20px;
   margin-bottom: 15px;
 }
 
-.adress_hours span {
-  font-size: 10px;
+.adress_hours {
+  font-size: 25px;
 }
 
 .iframe {
   width: 550px;
-  height: 350px;
+  height: 339px;
   margin: 10px;
   border: none;
 }
