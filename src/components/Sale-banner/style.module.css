@@ -1,0 +1,42 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 130px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: white;
+  background-image: url("../../images/sale-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container span {
+  font-size: 80px;
+}
+
+.container p {
+  font-size: 60px;
+  margin-bottom: 60px;
+}
+
+.container button {
+  width: 220px;
+  padding: 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #339933;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.container button:hover {
+  background-color: #297929;
+  transition: background-color 0.2s;
+}
