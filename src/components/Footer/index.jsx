@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <div className={s.container}>
       <div className={s.contacts}>
-        <span>Contact</span>
+        <h1>Contact</h1>
 
         <a className={s.contacts_tel} href="tel:+4999999999">
           +49 999 999 99 99
@@ -25,7 +25,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <span>Adress</span>
+        <h1>Adress</h1>
 
         <a className={s.contacts_adress} href="http://telRan.de">
           Linkstraße 2, 8 OG, 10785, Berlin, Deutschland
