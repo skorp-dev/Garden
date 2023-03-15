@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../icons/logo.png";
 import basketLogo from "../../icons/basket.png";
 import s from "./style.module.css";
@@ -9,15 +9,23 @@ export default function Nav() {
 
   return (
     <nav className={s.nav}>
-      <NavLink className={checkClass}>
+      <Link to="/">
         <img className={s.logo} src={logo} alt="logo" />
-      </NavLink>
+      </Link>
       <div className={s.nav_list}>
-        <NavLink className={s.catalog_btn}>Catalog</NavLink>
+        <Link to="/categories" className={s.catalog_btn}>
+          Catalog
+        </Link>
         <div className={s.nav_list_li}>
-          <NavLink className={checkClass}>Main Page</NavLink>
-          <NavLink className={checkClass}>All products</NavLink>
-          <NavLink className={checkClass}>All sales</NavLink>
+          <NavLink to="/" className={checkClass}>
+            Main Page
+          </NavLink>
+          <NavLink to="/products" className={checkClass}>
+            All products
+          </NavLink>
+          <NavLink to="/sales" className={checkClass}>
+            All sales
+          </NavLink>
         </div>
       </div>
       <NavLink className={checkClass}>
