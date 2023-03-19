@@ -11,7 +11,7 @@ export default function CatalogMain() {
     <div className={s.catalog}>
       <div className={s.header}>
         <h1>Catalog</h1>
-        <Link to="/categories">All categories</Link>
+        <Link to="/categories/all">All categories</Link>
       </div>
       <div className={s.container}>
         {categories

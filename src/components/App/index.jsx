@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import CategoriesPage from "../../pages/CategoriesPage";
 import MainPage from "../../pages/MainPage";
 import ProductsPage from "../../pages/ProductsPage";
-import SalesPage from "../../pages/SalesPage";
 import { loadCategories } from "../../store/asyncActions/loadCategories";
 import { loadProducts } from "../../store/asyncActions/loadProducts";
 import Footer from "../Footer";
@@ -24,9 +23,9 @@ export default function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/sales" element={<SalesPage />} />
-        <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/products/all" element={<ProductsPage />} />
+        <Route path="/:sales" element={<ProductsPage />} />
+        <Route path="/categories/all" element={<CategoriesPage />} />
       </Routes>
 
       <Footer />

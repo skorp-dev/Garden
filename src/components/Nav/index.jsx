@@ -13,14 +13,14 @@ export default function Nav() {
         <img className={s.logo} src={logo} alt="logo" />
       </Link>
       <div className={s.nav_list}>
-        <Link to="/categories" className={s.catalog_btn}>
+        <Link to="/categories/all" className={s.catalog_btn}>
           Catalog
         </Link>
         <div className={s.nav_list_li}>
           <NavLink to="/" className={checkClass}>
             Main Page
           </NavLink>
-          <NavLink to="/products" className={checkClass}>
+          <NavLink to="/products/all" className={checkClass}>
             All products
           </NavLink>
           <NavLink to="/sales" className={checkClass}>
