@@ -6,6 +6,7 @@ import MainPage from "../../pages/MainPage";
 import ProductsPage from "../../pages/ProductsPage";
 import SalesPage from "../../pages/SalesPage";
 import { loadCategories } from "../../store/asyncActions/loadCategories";
+import { loadProducts } from "../../store/asyncActions/loadProducts";
 import Footer from "../Footer";
 import Nav from "../Nav";
 import "./index.css";
@@ -15,6 +16,7 @@ export default function App() {
 
   useEffect(() => {
     dispatch(loadCategories);
+    dispatch(loadProducts);
   }, [dispatch]);
 
   return (

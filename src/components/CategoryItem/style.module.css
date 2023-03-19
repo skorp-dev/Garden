@@ -8,4 +8,5 @@
   height: 320px;
   object-fit: cover;
   margin-bottom: 15px;
+  border-radius: 15px;
 }
