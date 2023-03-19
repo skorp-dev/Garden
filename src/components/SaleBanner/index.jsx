@@ -4,7 +4,7 @@ import s from "./style.module.css";
 
 export default function SaleBanner() {
   return (
-    <div className={s.wrapper}>
+    
       <div className={s.container}>
         <span>Sale</span>
         <p>New Season</p>
@@ -12,6 +12,6 @@ export default function SaleBanner() {
           Sale
         </Link>
       </div>
-    </div>
+
   );
 }

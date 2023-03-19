@@ -6,6 +6,7 @@ import s from "./style.module.css";
 
 export default function CatalogMain() {
   const categories = useSelector((state) => state.category);
+  
   return (
     <div className={s.catalog}>
       <div className={s.header}>

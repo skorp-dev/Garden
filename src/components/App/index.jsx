@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import CategoriesPage from "../../pages/CategoriesPage";
 import MainPage from "../../pages/MainPage";
 import ProductsPage from "../../pages/ProductsPage";
 import SalesPage from "../../pages/SalesPage";
+import { loadCategories } from "../../store/asyncActions/loadCategories";
 import Footer from "../Footer";
 import Nav from "../Nav";
 import "./index.css";
 
 export default function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadCategories);
+  }, [dispatch]);
+
   return (
     <div>
       <Nav />
