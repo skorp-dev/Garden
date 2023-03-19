@@ -1,0 +1,16 @@
+.sale_main {
+  max-width: 1300px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.sale_main h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}

@@ -6,7 +6,7 @@ import s from "./style.module.css";
 
 export default function CatalogMain() {
   const categories = useSelector((state) => state.category);
-  
+
   return (
     <div className={s.catalog}>
       <div className={s.header}>
@@ -15,10 +15,10 @@ export default function CatalogMain() {
       </div>
       <div className={s.container}>
         {categories
-          .filter((item) => item.id <= 4)
-          .map((item) => (
-            <CategoryItem key={item.id} {...item} />
-          ))}
+        .slice(0, 4)
+        .map((item) => (
+          <CategoryItem key={item.id} {...item} />
+        ))}
       </div>
     </div>
   );
