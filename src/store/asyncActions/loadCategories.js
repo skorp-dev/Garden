@@ -5,6 +5,5 @@ export const loadCategories = async (dispatch) => {
 
   const resp = await fetch(link);
   const data = await resp.json();
-  console.log(data);
   dispatch(loadCategoriesAction(data));
 };

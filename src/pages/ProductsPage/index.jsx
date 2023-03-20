@@ -5,35 +5,36 @@ import ProductItem from "../../components/ProductItem";
 import s from "./style.module.css";
 
 export default function ProductsPage() {
-  const { sales } = useParams();
+  const { sales, catTitle, catId } = useParams();
 
   const products = useSelector(({ products }) => {
-    if (sales === undefined) {
-      return (
-        <div className={s.products}>
-          <h1>All products</h1>
-          <div className={s.container}>
-            {products.map((product) => (
-              <ProductItem key={product.id} {...product} />
-            ))}
-          </div>
-        </div>
-      );
+    if (sales === undefined && catId === undefined) {
+      return products;
+    } else if (catId !== undefined) {
+      return products.filter((item) => item.categoryId === +catId);
     } else {
-      return (
-        <div className={s.products}>
-          <h1>All Sales</h1>
-          <div className={s.container}>
-            {products
-              .filter((item) => item.discont_price !== null)
-              .map((product) => (
-                <ProductItem key={product.id} {...product} />
-              ))}
-          </div>
-        </div>
-      );
+      return products.filter((item) => item.discont_price !== null);
     }
   });
 
-  return products;
+  const header_title = () => {
+    if (sales === undefined && catId === undefined) {
+      return <h1>All products</h1>;
+    } else if (catId !== undefined) {
+      return <h1>{catTitle}</h1>;
+    } else {
+      return <h1>All sales</h1>;
+    }
+  };
+
+  return (
+    <div className={s.products}>
+      {header_title()}
+      <div className={s.container}>
+        {products.map((product) => (
+          <ProductItem key={product.id} {...product} />
+        ))}
+      </div>
+    </div>
+  );
 }

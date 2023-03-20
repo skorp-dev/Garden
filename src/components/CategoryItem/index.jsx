@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import s from "./style.module.css";
 
-export default function CategoryItem({ title, image }) {
-  const link = `/products/${title}`;
+export default function CategoryItem({ title, image, id }) {
+  const link = `/categories/${title}/${id}`;
   const img = `http://localhost:3333/${image}`;
 
   return (
