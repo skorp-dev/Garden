@@ -1,0 +1,25 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item img{
+  width: 710px;
+  height: 710px;
+  object-fit: cover;
+  border-radius: 5px;
+}

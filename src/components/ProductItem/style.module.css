@@ -3,6 +3,7 @@
   font-weight: 600;
   margin-bottom: 15px;
 }
+
 .product_card img {
   width: 100%;
   height: 320px;
@@ -10,37 +11,7 @@
   border-radius: 15px;
 }
 
-.product_card .title{
+.product_card .title {
   font-size: 16px;
   font-weight: 500;
 }
-
-.discount {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  margin-bottom: 10px;
-}
-
-.price {
-  font-size: 30px;
-  font-weight: 600;
-}
-
-.price span {
-  font-size: 20px;
-}
-
-.disc_price {
-  color: #8b8b8b;
-  font-size: 20px;
-  font-weight: 400;
-  text-decoration: line-through;
-}
-
-.procent {
-  color: #ff32a1;
-  font-weight: 600;
-}
-

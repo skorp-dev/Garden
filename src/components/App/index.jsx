@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import CategoriesPage from "../../pages/CategoriesPage";
+import DescriptionProductPage from "../../pages/DescriptionProductPage";
 import MainPage from "../../pages/MainPage";
 import ProductsPage from "../../pages/ProductsPage";
 import { loadCategories } from "../../store/asyncActions/loadCategories";
@@ -24,6 +25,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/products/all" element={<ProductsPage />} />
+        <Route path="/product/:id" element={<DescriptionProductPage />} />
         <Route path="/categories/:catTitle/:catId" element={<ProductsPage />} />
         <Route path="/:sales" element={<ProductsPage />} />
         <Route path="/categories/all" element={<CategoriesPage />} />

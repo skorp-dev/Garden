@@ -1,0 +1,33 @@
+
+.discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.price span {
+  font-size: 20px;
+}
+
+.disc_price {
+  color: #8b8b8b;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.descr_font{
+  font-size: 80px;
+}
+
+.procent {
+  color: #ff32a1;
+  font-weight: 600;
+}
+
