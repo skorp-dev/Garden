@@ -1,0 +1,25 @@
+
+.container{
+  padding: 20px;
+}
+
+.container_store{
+  max-width: 800px;
+  display: flex;
+  justify-content: flex-end;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+
+.counter {
+  min-width: 400px;
+  border: 2px solid black;
+  height: 400px;
+}
+

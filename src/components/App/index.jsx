@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+import BasketPage from "../../pages/BasketPage";
 import CategoriesPage from "../../pages/CategoriesPage";
 import DescriptionProductPage from "../../pages/DescriptionProductPage";
 import MainPage from "../../pages/MainPage";
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/categories/:catTitle/:catId" element={<ProductsPage />} />
         <Route path="/:sales" element={<ProductsPage />} />
         <Route path="/categories/all" element={<CategoriesPage />} />
+        <Route path="/basket/" element={<BasketPage />} />
       </Routes>
     
 

@@ -28,7 +28,7 @@ export default function Nav() {
           </NavLink>
         </div>
       </div>
-      <NavLink className={checkClass}>
+      <NavLink to="/basket" className={checkClass}>
         <img src={basketLogo} alt="basket" />
       </NavLink>
     </nav>

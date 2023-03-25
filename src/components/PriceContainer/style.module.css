@@ -1,9 +1,9 @@
-
 .discount {
+  min-width: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 20px;
 }
 
 .price {
@@ -22,12 +22,16 @@
   text-decoration: line-through;
 }
 
-.descr_font{
+.descr_font {
   font-size: 70px;
 }
 
 .procent {
   color: #ff32a1;
   font-weight: 600;
+  font-size: 20px;
 }
 
+.basket {
+  display: none;
+}
