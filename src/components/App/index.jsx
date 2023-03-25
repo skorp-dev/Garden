@@ -20,8 +20,9 @@ export default function App() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="wrapper">
       <Nav />
+     
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/products/all" element={<ProductsPage />} />
@@ -30,6 +31,8 @@ export default function App() {
         <Route path="/:sales" element={<ProductsPage />} />
         <Route path="/categories/all" element={<CategoriesPage />} />
       </Routes>
+    
+
 
       <Footer />
     </div>

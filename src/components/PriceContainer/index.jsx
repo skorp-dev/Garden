@@ -21,7 +21,7 @@ export default function PriceContainer({ price, discont_price, font}) {
     } else {
       return (
         <>
-          <p className={s.price}>
+          <p className={[s.price, font === "descr" ? s.descr_font : " "].join(" ")}>
             {price}
             <span>$</span>
           </p>

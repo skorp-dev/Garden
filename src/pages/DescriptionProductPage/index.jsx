@@ -23,12 +23,12 @@ export default function DescriptionProductPage() {
           <h1>{title}</h1>
           <div className={s.item}>
             <img src={img} alt={title} />
-            <div>
-              <div>
+            <div className={s.content}>
+              <div className={s.content_top}>
                 <PriceContainer price={price} discont_price={discont_price} font={"descr"}/>
                 <button>To cart</button>
               </div>
-              <div>
+              <div className={s.content_bottom}>
                 <h3>Description</h3>
                 <p>{description}</p>
               </div>

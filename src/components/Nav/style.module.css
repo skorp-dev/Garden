@@ -7,14 +7,8 @@
   flex-wrap: wrap;
 }
 
-.nav {
-  max-width: 1300px;
-  margin: 0 auto;
+.nav{
   padding: 20px;
-}
-
-.nav a {
-  text-decoration: none;
 }
 
 .logo {

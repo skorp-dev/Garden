@@ -1,16 +1,14 @@
 .container {
-  max-width: 1300px;
-  margin: 0 auto;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 10px;
 }
 
 .contacts {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+ 
 }
 
 .contacts h1 {
