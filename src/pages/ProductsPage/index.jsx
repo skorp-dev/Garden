@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import ProductItem from "../../components/ProductItem";
+import ProdutsFilter from "../../components/ProductsFilter";
 import s from "./style.module.css";
 
 export default function ProductsPage() {
@@ -30,6 +31,7 @@ export default function ProductsPage() {
   return (
     <div className={s.products}>
       {header_title()}
+      <ProdutsFilter />
       <div className={s.container}>
         {products.map((product) => (
           <ProductItem key={product.id} {...product} />

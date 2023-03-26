@@ -14,9 +14,7 @@ export default function CatalogMain() {
         <Link to="/categories/all">All categories</Link>
       </div>
       <div className={s.container}>
-        {categories
-        .slice(0, 4)
-        .map((item) => (
+        {categories.slice(0, 4).map((item) => (
           <CategoryItem key={item.id} {...item} />
         ))}
       </div>

@@ -8,7 +8,6 @@
 .contacts {
   display: flex;
   flex-direction: column;
- 
 }
 
 .contacts h1 {

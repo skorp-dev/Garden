@@ -22,7 +22,7 @@ export default function BasketPage() {
       <div className={s.content}>
         <div className={s.cotent_items}>
           {data.length === 0 ? (
-            <p>Without product</p>
+            <h3>Without products :{"("}</h3>
           ) : (
             data.map((item) => <BasketItem key={item.id} {...item} />)
           )}

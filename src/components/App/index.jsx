@@ -5,6 +5,7 @@ import BasketPage from "../../pages/BasketPage";
 import CategoriesPage from "../../pages/CategoriesPage";
 import DescriptionProductPage from "../../pages/DescriptionProductPage";
 import MainPage from "../../pages/MainPage";
+import NotFoundPage from "../../pages/NotFoundPage";
 import ProductsPage from "../../pages/ProductsPage";
 import { loadCategories } from "../../store/asyncActions/loadCategories";
 import { loadProducts } from "../../store/asyncActions/loadProducts";
@@ -32,6 +33,7 @@ export default function App() {
         <Route path="/:sales" element={<ProductsPage />} />
         <Route path="/categories/all" element={<CategoriesPage />} />
         <Route path="/basket/" element={<BasketPage />} />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     
 

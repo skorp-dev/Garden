@@ -3,13 +3,6 @@ const BASKET_DECREMENT = "BASKET_DECREMENT";
 const BASKET_DEL_ITEM = "BASKET_DEL_ITEM";
 const BASKET_ADD = "BASKET_ADD";
 
-const defBAsket = [
-  { id: 1, count: 12 },
-  { id: 2, count: 10 },
-  { id: 3, count: 5 },
-  { id: 4, count: 19 },
-];
-
 export const basketIncrementAction = (payload) => ({
   type: BASKET_INCREMENT,
   payload,
@@ -30,7 +23,7 @@ export const basketAddItemAction = (payload) => ({
   payload,
 });
 
-export const BasketReducer = (state = defBAsket, action) => {
+export const BasketReducer = (state = [], action) => {
   if (action.type === BASKET_INCREMENT) {
     const product = state.find(({ id }) => action.payload === id);
     product.count++;

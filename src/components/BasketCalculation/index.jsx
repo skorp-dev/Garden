@@ -14,7 +14,7 @@ export default function BasketCalculation() {
     (acc, { count, price }) => acc + count * price,
     0
   );
- 
+
   return (
     <div className={s.container}>
       <h2>Order details</h2>
@@ -26,7 +26,7 @@ export default function BasketCalculation() {
         </p>
       </div>
       <form className={s.form}>
-        <input type="text" placeholder="Phone number"/>
+        <input type="text" placeholder="Phone number" />
         <button>Order</button>
       </form>
     </div>
