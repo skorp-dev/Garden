@@ -14,6 +14,7 @@ export default function BasketCalculation() {
     (acc, { count, price }) => acc + count * price,
     0
   );
+ 
   return (
     <div className={s.container}>
       <h2>Order details</h2>

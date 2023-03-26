@@ -25,8 +25,10 @@
 }
 
 .container_total p {
+  max-width: 255px;
   font-size: 32px;
   font-weight: 600;
+  overflow: hidden;
 }
 
 .container_total span {
@@ -49,6 +51,7 @@
 .form button {
   padding: 20px;
   font-size: 28px;
+  font-weight: 700;
   background-color: #339933;
   border-radius: 20px;
   color: #ffffff;

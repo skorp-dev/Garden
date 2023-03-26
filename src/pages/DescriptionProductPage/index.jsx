@@ -1,12 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import PriceContainer from "../../components/PriceContainer";
+import { basketAddItemAction } from "../../store/reducer/BasketReducer";
 import s from "./style.module.css";
 
 export default function DescriptionProductPage() {
   const { id } = useParams();
   const products = useSelector(({ products }) => products);
+  const dispatch = useDispatch();
 
   const render = () => {
     if (products.length === 0) {
@@ -25,8 +27,14 @@ export default function DescriptionProductPage() {
             <img src={img} alt={title} />
             <div className={s.content}>
               <div className={s.content_top}>
-                <PriceContainer price={price} discont_price={discont_price} font={"descr"}/>
-                <button>To cart</button>
+                <PriceContainer
+                  price={price}
+                  discont_price={discont_price}
+                  font={"descr"}
+                />
+                <button onClick={() => dispatch(basketAddItemAction(+id))}>
+                  To cart
+                </button>
               </div>
               <div className={s.content_bottom}>
                 <h3>Description</h3>

@@ -44,3 +44,25 @@
 a.activ {
   color: #339933;
 }
+
+.basket {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  top: -14px;
+  right: -24px;
+  background-color: #339933;
+  color: #ffffff;
+  padding: 2px;
+  min-width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.count_off {
+  display: none;
+}

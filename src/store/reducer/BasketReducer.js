@@ -1,6 +1,7 @@
 const BASKET_INCREMENT = "BASKET_INCREMENT";
 const BASKET_DECREMENT = "BASKET_DECREMENT";
 const BASKET_DEL_ITEM = "BASKET_DEL_ITEM";
+const BASKET_ADD = "BASKET_ADD";
 
 const defBAsket = [
   { id: 1, count: 12 },
@@ -24,6 +25,11 @@ export const basketDelItemAction = (payload) => ({
   payload,
 });
 
+export const basketAddItemAction = (payload) => ({
+  type: BASKET_ADD,
+  payload,
+});
+
 export const BasketReducer = (state = defBAsket, action) => {
   if (action.type === BASKET_INCREMENT) {
     const product = state.find(({ id }) => action.payload === id);
@@ -40,6 +46,14 @@ export const BasketReducer = (state = defBAsket, action) => {
     }
   } else if (action.type === BASKET_DEL_ITEM) {
     return state.filter(({ id }) => id !== action.payload);
+  } else if (action.type === BASKET_ADD) {
+    const product = state.find(({ id }) => id === action.payload);
+    if (product === undefined) {
+      return [...state, { id: action.payload, count: 1 }];
+    } else {
+      product.count++;
+      return [...state];
+    }
   } else {
     return state;
   }

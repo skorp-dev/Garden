@@ -1,3 +1,13 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper:hover .add_basket {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
 .product_card {
   font-size: 18px;
   font-weight: 600;
@@ -14,4 +24,21 @@
 .product_card .title {
   font-size: 16px;
   font-weight: 500;
+  height: 35px;
+}
+
+.add_basket {
+  width: 100%;
+  position: absolute;
+  padding: 25px;
+  bottom: 77px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #339933;
+  border: 2px solid #339933;
+  background-color: #f1fff1;
+  border-radius: 15px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
