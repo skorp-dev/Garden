@@ -1,12 +1,18 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import ProductItem from "../../components/ProductItem";
 import ProdutsFilter from "../../components/ProductsFilter";
+import { productsFilterResetAction } from "../../store/reducer/ProductsReducer";
 import s from "./style.module.css";
 
 export default function ProductsPage() {
+  const dispatch = useDispatch();
   const { sales, catTitle, catId } = useParams();
+
+  useEffect(() => {
+    dispatch(productsFilterResetAction());
+  }, [dispatch]);
 
   const products = useSelector(({ products }) => {
     if (sales === undefined && catId === undefined) {
@@ -33,9 +39,11 @@ export default function ProductsPage() {
       {header_title()}
       <ProdutsFilter />
       <div className={s.container}>
-        {products.map((product) => (
-          <ProductItem key={product.id} {...product} />
-        ))}
+        {products
+          .filter(({ show }) => Object.values(show).every((item) => item))
+          .map((product) => (
+            <ProductItem key={product.id} {...product} />
+          ))}
       </div>
     </div>
   );

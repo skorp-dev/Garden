@@ -13,10 +13,10 @@ export default function PriceContainer({ price, discont_price, font, basket }) {
               " "
             )}
           >
-            {discont_price}
+            {discont_price.toFixed(2)}
             <span>$</span>
           </p>
-          <p className={s.disc_price}>{price}$</p>
+          <p className={s.disc_price}>{price.toFixed(2)}$</p>
           <p
             className={[s.procent, basket === "basket" ? s.basket : " "].join(
               " "
@@ -34,7 +34,7 @@ export default function PriceContainer({ price, discont_price, font, basket }) {
               " "
             )}
           >
-            {price}
+            {price.toFixed(2)}
             <span>$</span>
           </p>
         </>

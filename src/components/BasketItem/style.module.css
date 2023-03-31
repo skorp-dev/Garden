@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
+  border-bottom: 1px solid#c0c0c0;
 }
 
 .item img {
@@ -50,8 +51,18 @@
 }
 
 .item_del button {
+  width: 25px;
+  height: 25px;
+  color: #ffffff;
   border: none;
-  background-color: transparent;
+  background-color: #339933;
   cursor: pointer;
   font-size: 18px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.item_del button:hover {
+  background-color: #297929;
+  transition: background-color 0.2s;
 }

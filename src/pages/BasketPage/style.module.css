@@ -4,9 +4,22 @@
 
 .container_store {
   max-width: 800px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: flex-end;
+  border-bottom: 1px solid #c0c0c0;
 }
+
+.container_store a {
+  transition: color 0.2s;
+}
+
+.container_store a:hover {
+  transition: color 0.2s;
+  color: #339933;
+}
+
 .content {
   display: flex;
   justify-content: space-between;

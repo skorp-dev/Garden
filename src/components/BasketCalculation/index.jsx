@@ -11,7 +11,10 @@ export default function BasketCalculation() {
   });
 
   const totalPrice = data.reduce(
-    (acc, { count, price }) => acc + count * price,
+    (acc, { count, discont_price, price }) =>
+      discont_price === null
+        ? acc + count * price
+        : acc + count * discont_price,
     0
   );
 
@@ -21,7 +24,7 @@ export default function BasketCalculation() {
       <div className={s.container_total}>
         <h3>Total</h3>
         <p>
-          {totalPrice}
+          {totalPrice.toFixed(2)}
           <span>$</span>
         </p>
       </div>
