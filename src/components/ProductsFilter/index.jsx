@@ -60,7 +60,7 @@ export default function ProdutsFilter() {
           <div className={s.arrow}></div>
           <div className={s.arrow}></div>
           <select onChange={onSelect}>
-            <option value="">Select filter...</option>
+            <option value="def">Select filter...</option>
             <option value="priceUp">price Up</option>
             <option value="priceDown">price Down</option>
           </select>

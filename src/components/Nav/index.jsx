@@ -12,7 +12,7 @@ export default function Nav() {
   const totalCount = basket.reduce((acc, { count }) => acc + count, 0);
 
   return (
-    <nav className={s.nav}>
+    <div className={s.nav}>
       <Link to="/">
         <img className={s.logo} src={logo} alt="logo" />
       </Link>
@@ -31,19 +31,45 @@ export default function Nav() {
             All sales
           </NavLink>
         </div>
-      </div>
-      <NavLink to="/basket" className={checkClass}>
-        <div className={s.basket}>
-          <img src={basketLogo} alt="basket" />
-          <span
-            className={[s.count, totalCount === 0 ? s.count_off : " "].join(
-              " "
-            )}
-          >
-            {totalCount}
-          </span>
+        <NavLink to="/basket" className={checkClass}>
+          <div className={s.basket}>
+            <img src={basketLogo} alt="basket" />
+            <span
+              className={[s.count, totalCount === 0 ? s.count_off : " "].join(
+                " "
+              )}
+            >
+              {totalCount}
+            </span>
+          </div>
+        </NavLink>
+        <div className={s.hamb}>
+          <input type="checkbox" id={s.menu_toggle} />
+          <label className={s.hamb_btn} for={s.menu_toggle}>
+            <span></span>
+          </label>
+
+          <ul className={s.popup} id="popup">
+            <li>
+              <NavLink to="/" className={checkClass}>
+                Main Page
+              </NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink to="/products/all" className={checkClass}>
+                All products
+              </NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink to="/sales" className={checkClass}>
+                All sales
+              </NavLink>
+            </li>
+          </ul>
         </div>
-      </NavLink>
-    </nav>
+      </div>
+    </div>
   );
 }

@@ -16,25 +16,23 @@
   object-fit: cover;
 }
 
-
-
-.content h2{
+.content h2 {
   font-size: 90px;
   line-height: 108px;
 }
 
-.content span{
+.content span {
   font-size: 50px;
   line-height: 60px;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.form input{
+.form input {
   margin-top: 50px;
   padding: 20px 50px;
   font-size: 18px;
@@ -42,7 +40,7 @@
   border: none;
 }
 
-.form button{
+.form button {
   padding: 14px;
   text-align: center;
   border-radius: 25px;
@@ -51,4 +49,20 @@
   color: white;
   background-color: transparent;
   cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .container img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .content h2 {
+    font-size: 60px;
+  }
+
+  .content span {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }

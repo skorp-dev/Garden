@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ProductItem from "../../components/ProductItem";
 import ProdutsFilter from "../../components/ProductsFilter";
 import { productsFilterResetAction } from "../../store/reducer/ProductsReducer";
+import { loadProducts } from "../../store/asyncActions/loadProducts";
 import s from "./style.module.css";
 
 export default function ProductsPage() {
@@ -12,6 +13,7 @@ export default function ProductsPage() {
 
   useEffect(() => {
     dispatch(productsFilterResetAction());
+    dispatch(loadProducts);
   }, [dispatch]);
 
   const products = useSelector(({ products }) => {
