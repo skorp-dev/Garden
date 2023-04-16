@@ -28,7 +28,6 @@
   max-width: 255px;
   font-size: 32px;
   font-weight: 600;
-  overflow: hidden;
 }
 
 .container_total span {
@@ -42,6 +41,7 @@
 }
 
 .form input {
+  max-width: 400px;
   padding: 25px;
   font-size: 18px;
   border-radius: 20px;
@@ -49,6 +49,7 @@
 }
 
 .form button {
+  max-width: 400px;
   padding: 20px;
   font-size: 28px;
   font-weight: 700;
@@ -63,4 +64,22 @@
 .form button:hover {
   background-color: #297929;
   transition: background-color 0.2s;
+}
+
+.phone_number::-webkit-inner-spin-button {
+  display: none;
+}
+
+@media (max-width: 1276px) {
+  .container {
+    width: 100%;
+  }
+  .form {
+    align-items: center;
+  }
+
+  .form input,
+  .form button {
+    width: 100%;
+  }
 }

@@ -35,3 +35,9 @@
 .basket {
   display: none;
 }
+
+@media (max-width: 780px) {
+  .descr_font {
+    font-size: 40px;
+  }
+}

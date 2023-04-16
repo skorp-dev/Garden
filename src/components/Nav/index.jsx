@@ -45,7 +45,7 @@ export default function Nav() {
         </NavLink>
         <div className={s.hamb}>
           <input type="checkbox" id={s.menu_toggle} />
-          <label className={s.hamb_btn} for={s.menu_toggle}>
+          <label className={s.hamb_btn} htmlFor={s.menu_toggle}>
             <span></span>
           </label>
 

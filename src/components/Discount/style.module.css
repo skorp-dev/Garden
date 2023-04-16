@@ -51,6 +51,10 @@
   cursor: pointer;
 }
 
+.phone_number::-webkit-inner-spin-button {
+  display: none;
+}
+
 @media (max-width: 720px) {
   .container img {
     width: 350px;

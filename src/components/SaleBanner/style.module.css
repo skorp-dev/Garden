@@ -37,9 +37,8 @@
   transition: background-color 0.2s;
 }
 
-
 @media (max-width: 780px) {
-  .container{
+  .container {
     margin-top: 116px;
     align-items: center;
   }
@@ -47,7 +46,7 @@
   .container span {
     font-size: 60px;
   }
-  
+
   .container p {
     font-size: 40px;
     margin-bottom: 40px;

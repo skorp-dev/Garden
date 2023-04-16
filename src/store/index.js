@@ -7,7 +7,7 @@ import thunk from "redux-thunk";
 const rootReducer = combineReducers({
   category: CategoryReducer,
   products: ProductsReducer,
-  basket: BasketReducer
+  basket: BasketReducer,
 });
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));

@@ -20,7 +20,7 @@ export default function BasketPage() {
         <Link to="/products/all">Back to the store {`>`} </Link>
       </div>
       <div className={s.content}>
-        <div className={s.cotent_items}>
+        <div>
           {data.length === 0 ? (
             <h3>Without products :{"("}</h3>
           ) : (

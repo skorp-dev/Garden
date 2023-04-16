@@ -24,7 +24,7 @@ export default function App() {
   return (
     <div className="wrapper">
       <Nav />
-     
+
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/products/all" element={<ProductsPage />} />
@@ -35,8 +35,6 @@ export default function App() {
         <Route path="/basket/" element={<BasketPage />} />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
-    
-
 
       <Footer />
     </div>

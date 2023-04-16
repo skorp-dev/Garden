@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 20px 0;
   border-bottom: 1px solid#c0c0c0;
+  position: relative;
 }
 
 .item img {
@@ -65,4 +66,48 @@
 .item_del button:hover {
   background-color: #297929;
   transition: background-color 0.2s;
+}
+
+@media (max-width: 1276px) {
+  .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 735px) {
+  .item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item img {
+    width: 80%;
+    height: 320px;
+    margin-right: 0;
+  }
+
+  .item_info {
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .item_info p {
+    margin-bottom: 15px;
+  }
+
+  .item_info_btns {
+    width: 100%;
+  }
+
+  .item_del {
+    position: absolute;
+    right: 80px;
+    top: 40px;
+    margin: 0;
+  }
+
+  .item_del button {
+    width: 35px;
+    height: 35px;
+  }
 }

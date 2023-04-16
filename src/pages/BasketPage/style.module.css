@@ -2,8 +2,12 @@
   padding: 20px;
 }
 
+.container h2 {
+  margin-bottom: 10px;
+}
+
 .container_store {
-  max-width: 800px;
+  width: 800px;
   margin-bottom: 15px;
   padding-bottom: 10px;
   display: flex;
@@ -27,8 +31,21 @@
   gap: 20px;
 }
 
-.counter {
-  min-width: 400px;
-  border: 2px solid black;
-  height: 400px;
+.content h3 {
+  width: 800px;
+}
+
+@media (max-width: 1276px) {
+  .container_store {
+    width: 100%;
+  }
+  .content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    margin-top: 116px;
+  }
 }

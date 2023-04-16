@@ -56,7 +56,7 @@ export default function ProdutsFilter() {
 
       <label>
         sorted by
-        <div className={s.test}>
+        <div className={s.sort}>
           <div className={s.arrow}></div>
           <div className={s.arrow}></div>
           <select onChange={onSelect}>

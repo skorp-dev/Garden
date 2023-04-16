@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import s from "./style.module.css";
+import { postAction } from "../../store/asyncActions/postAction";
 
 export default function BasketCalculation() {
   const { products, basket } = useSelector((state) => state);
@@ -18,6 +19,15 @@ export default function BasketCalculation() {
     0
   );
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const { number } = e.target;
+    const dataNum = `+${+number.value}`;
+
+    postAction("http://localhost:3333/order/send", dataNum);
+    number.value = "";
+  };
+
   return (
     <div className={s.container}>
       <h2>Order details</h2>
@@ -28,8 +38,13 @@ export default function BasketCalculation() {
           <span>$</span>
         </p>
       </div>
-      <form className={s.form}>
-        <input type="text" placeholder="Phone number" />
+      <form className={s.form} onSubmit={onSubmit}>
+        <input
+          className={s.phone_number}
+          type="number"
+          name="number"
+          placeholder="Phone number"
+        />
         <button>Order</button>
       </form>
     </div>

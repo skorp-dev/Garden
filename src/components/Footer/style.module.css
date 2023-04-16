@@ -54,3 +54,13 @@
   margin: 10px;
   border: none;
 }
+
+@media (max-width: 480px) {
+  .contacts h1 {
+    font-size: 30px;
+  }
+
+  .contacts_tel {
+    font-size: 30px;
+  }
+}
