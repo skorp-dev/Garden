@@ -12,7 +12,7 @@ export default function SaleMain() {
       <div className={s.container}>
         {products
           .filter((item) => item.discont_price !== null)
-          .slice(0, 4)
+          .slice(0, 3)
           .map((product) => (
             <ProductItem key={product.id} {...product} />
           ))}
